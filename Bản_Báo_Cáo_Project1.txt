@@ -1,0 +1,8 @@
+	KẾ HOẠCH PROJECT 1(BẢN TẠM THỜI)
+Họ và tên sinh viên : Nguyễn Văn Minh
+Lớp :K23CNTT4
+Đề tài : THIẾT KẾ WEB BÁN HÀNG
+Ngày :23/11-25/11
+BUỔI 1 - NỘI DUNG NGHIÊN CỨU : Cơ sở dữ liệu sql,mô hình quan  hệ thực thể và
+chi tiết mô hình quan hệ thực thể
+Trạng Thái : Vẫn đang trong quá trình hoàn thành
