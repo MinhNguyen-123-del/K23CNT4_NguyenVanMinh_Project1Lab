@@ -8,6 +8,6 @@
 </head>
 <body>
     <h1>Nguyen Van Minh</h1>
-    <x-header/>
+    <x-header name="Minh Nguyen":fruits="$fruits"/>
 </body>
 </html>

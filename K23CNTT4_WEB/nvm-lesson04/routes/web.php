@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/nvm-test', function () {
-    return view('nvm-test');
+Route::get('/test', function () {
+    return view('test');
 });
 Route::get('/nvm-view1', function () {
     return view('nvm-view1',['name'=>"K23CNTT4-Project1-Nguyen Van Minh"]);
