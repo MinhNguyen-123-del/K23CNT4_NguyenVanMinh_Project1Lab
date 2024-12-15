@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Thông Tin Chi Tiết Khoa</title>
+    <title>Them moi thong tin khoa</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
 <body>
     <section class="container my-3">
-        <form action="{{route('nvmKhoa.nvmInsert')}}" method="POST">
+        <form action="{{route('nvmkhoa.nvmEditSubmit')}}" method="POST">
             @csrf
             <div class="card">
                 <div class="card-header">
-                    <h3>Thông tin chi tiết khoa cần sửa</h3>
+                    <h3>Them moi thong tin Khoa</h3>
                 </div>
                 <div class="card-body">
                     <div class="mb-3 row">
@@ -28,9 +28,12 @@
                         <label for="NVMTenKhoa" class="col-sm-2 col-form-label">Tên Khoa</label>
                         <div class="col-sm-10">
                           <input type="text" readonly class="form-control" 
-                            id="nvmInsert" name="NVMTenKhoa"
-                            value="{{$nvmKhoa->nvmTenKhoa}}">
+                            id="NVMTenKhoa" name="NVMTenKhoa"
+                            value="">
                         </div>
+                        @error('NVMTenKhoa')
+                            <div class=""></div>
+                        @enderror
                       </div>
                 </div>
                 <div class="card-footer">

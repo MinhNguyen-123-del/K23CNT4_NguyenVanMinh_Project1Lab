@@ -35,4 +35,23 @@ class NvmKhoaController extends Controller
         DB::update("UPDATE thong_tin SET NVMTenKhoa = ? WHERE NVMMaKhoa=? ",[$tenkh,$makh]);
         return redirect('/khoas');
     }
+    public function nvmInsert()
+    {
+        return view('nvmKhoa.nvmInsert');
+    }
+    public function nvmInsertSubmit()
+    {
+        return
+        //Kiem tra du lieu dang nhap
+        $validate =$request->validate([
+            
+            'NVMMaKhoa'=> 'required|max:50',
+            'NVMTenKhoa'=> 'required|max:2'
+        ]);
+        //Lay du lieu tren form
+
+        //Ghi du lieu xuong database
+
+        //chuyen sang trang danh sach
+    }
 }

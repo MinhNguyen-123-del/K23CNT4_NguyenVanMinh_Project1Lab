@@ -22,3 +22,4 @@ Route::get('/khoas',[NvmKhoaController::class,'nvmGetAllKhoa'])->name('nvmkhoa.n
 Route::get('/khoas/detail/{makh}',[NvmKhoaController::class,'nvmGetKhoa'])->name('nvmkhoa.nvmgetKhoa');
 Route::get('/khoas/edit/{makh}',[NvmKhoaController::class,'nvmEdit'])->name('nvmkhoa.nvmEdit');
 Route::post('/khoas/edit',[NvmKhoaController::class,'nvmEditSubmit'])->name('nvmkhoa.nvmEditSubmit');
+Route::get('/khoas/insert',[NvmKhoaController::class,'nnvmInsert'])->name('nvmKhoa.nvmInsert');
