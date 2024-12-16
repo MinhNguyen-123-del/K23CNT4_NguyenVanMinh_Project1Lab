@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\NvmSinhVienController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,5 +16,3 @@ use App\Http\Controllers\NvmSinhVienController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/nvm-sinhvien',[NvmSinhVienController::class,'nvmList'])-> name ('NvmSinhVien.nvmList');

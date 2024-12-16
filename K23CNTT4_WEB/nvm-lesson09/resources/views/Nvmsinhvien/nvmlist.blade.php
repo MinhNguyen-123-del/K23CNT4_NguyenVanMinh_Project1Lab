@@ -38,7 +38,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
             @php
             $stt=0;
             @endphp
-            @foreach ($nvmsinhvien as $item)
+            @foreach ($nvmSinhViens as $item)
             @php
             $stt++;
             @endphp
@@ -53,7 +53,8 @@ href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
                     <td>{{$item->HocBong}}</td>
                     <td class="text right">{{$item->HocBong}}</td>
                     <td class="text-center">
-                        view/ edit / delete
+                         
+                    </td>
                 </tr>
             @endforeach
             </tbody>
@@ -62,7 +63,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
         </div>
     </div>
     <div class="card-footer">
-        <h3>Tong So Sinh Vien {{$nvmsinhvien->count()}}</h3>
+        <h3>Tổng Số Sinh Viên : {{$nvmSinhViens->count()}}</h3>
         <a href="/nvm-sinhviens/create" class="btn btn-primary">Them Moi</a>
     </div>
     </section>
