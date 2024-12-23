@@ -33,8 +33,9 @@
                         <td>
                             view /
                             <a href="/nvm-admins/nvm-loai-san-pham/nvm-edit/{{$item->id}}">Edit</a>
+                            <a href="/nvm-admins/nvm-loai-san-pham/nvm-delete/{{$item->id}}"
+                                onclick="return confirm('Bạn có chắc chắn xóa ko?')">Delete</a>
                             
-                            delete
                         </td>
                     </tr>
                     

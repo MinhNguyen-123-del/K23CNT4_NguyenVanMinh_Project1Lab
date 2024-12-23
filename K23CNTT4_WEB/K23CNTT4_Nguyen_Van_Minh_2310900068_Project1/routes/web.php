@@ -36,3 +36,5 @@ Route::post('/nvm-admins/nvm-loai-san-pham/nvm-create',[nvm_Loai_San_Pham_Contro
 #Edit loại sản phẩm
 Route::get('/nvm-admins/nvm-loai-san-pham/nvm-edit/{id}',[nvm_Loai_San_Pham_Controller::class,'nvmEdit'])->name('nvmadmins.nvmloaisanpham.nvmedit');
 Route::get('/nvm-admins/nvm-loai-san-pham/nvm-edit',[nvm_Loai_San_Pham_Controller::class,'nvmEditSubmit'])->name('nvmadmins.nvmloaisanpham.nvmeditsubmit');
+#Delete
+Route::get('/nvm-admins/nvm-loai-san-pham/nvm-delete/{id}',[nvm_Loai_San_Pham_Controller::class,'nvmDelete'])->name('nvmadmins.nvmloaisanpham.nvmdelete');

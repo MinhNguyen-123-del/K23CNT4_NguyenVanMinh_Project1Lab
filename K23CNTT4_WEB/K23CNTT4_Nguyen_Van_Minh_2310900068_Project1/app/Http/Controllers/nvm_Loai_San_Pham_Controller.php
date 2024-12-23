@@ -48,5 +48,10 @@ class nvm_Loai_San_Pham_Controller extends Controller
 
         return redirect()->route('nvmadmins.nvmloaisanpham');
     }
-    
+    public function nvmDelete($id)
+    {
+        $nvmLoaiSanPham=nvm_loai_san_pham::find($id);
+        $nvmLoaiSanPham->delete();
+        return redirect()->route('nvmadmins.nvmloaisanpham');
+    }
 }
