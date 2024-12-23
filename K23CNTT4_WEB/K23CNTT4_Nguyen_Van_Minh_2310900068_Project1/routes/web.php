@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NVM_QUAN_TRIController;
+use App\Http\Controllers\nvm_Loai_San_Pham_Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +25,14 @@ Route::get('/quantris',[NVM_QUAN_TRIController::class,'nvmGetAllQuanTri'])->name
 Route::get('/admins/edit-quan-tri/{id}', [NVM_QUAN_TRIController::class, 'nvmEditQuanTri'])->name('admins.editQuanTri');
 Route::post('/admins/edit-quan-tri',[NVM_QUAN_TRIController::class,'nvmEditQuanTriSubmit'])->name('admins.nvmEditQuanTriSubmit');
 Route::get('/admins/insert',[NVM_QUAN_TRIController::class,'nvmInsert'])->name('admins.nvmInsert');
-//san pham
+#Admins
+Route::get('/nvm-admins',function(){
+    return view('nvmAdmins.index');
+});
 
+Route::get('/nvm-admins/nvm-loai-san-pham',[nvm_Loai_San_Pham_Controller::class,'nvmList'])->name('nvmadmins.nvmloaisanpham');
+Route::get('/nvm-admins/nvm-loai-san-pham/nvm-create',[nvm_Loai_San_Pham_Controller::class,'nvmCreate'])->name('nvmadmins.nvmloaisanpham.nvmcreate');
+Route::post('/nvm-admins/nvm-loai-san-pham/nvm-create',[nvm_Loai_San_Pham_Controller::class,'nvmCreateSubmit'])->name('nvmadmins.nvmloaisanpham.nvmcreatesubmit');
+#Edit loại sản phẩm
+Route::get('/nvm-admins/nvm-loai-san-pham/nvm-edit/{id}',[nvm_Loai_San_Pham_Controller::class,'nvmEdit'])->name('nvmadmins.nvmloaisanpham.nvmedit');
+Route::get('/nvm-admins/nvm-loai-san-pham/nvm-edit',[nvm_Loai_San_Pham_Controller::class,'nvmEditSubmit'])->name('nvmadmins.nvmloaisanpham.nvmeditsubmit');

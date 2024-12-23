@@ -38,4 +38,5 @@ class NVM_QUAN_TRIController extends Controller
                [$taikhoan, $matkhau, $trangthai, $id]);
         return redirect('/quantris');
     }
+    
 }
