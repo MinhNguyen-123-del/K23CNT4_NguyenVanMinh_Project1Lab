@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NVM_QUAN_TRIController;
 use App\Http\Controllers\nvm_Loai_San_Pham_Controller;
+use App\Http\Controllers\nvm_san_pham_Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,3 +39,6 @@ Route::get('/nvm-admins/nvm-loai-san-pham/nvm-edit/{id}',[nvm_Loai_San_Pham_Cont
 Route::get('/nvm-admins/nvm-loai-san-pham/nvm-edit',[nvm_Loai_San_Pham_Controller::class,'nvmEditSubmit'])->name('nvmadmins.nvmloaisanpham.nvmeditsubmit');
 #Delete
 Route::get('/nvm-admins/nvm-loai-san-pham/nvm-delete/{id}',[nvm_Loai_San_Pham_Controller::class,'nvmDelete'])->name('nvmadmins.nvmloaisanpham.nvmdelete');
+#Loai San Pham
+Route::get('/nvm-admins/nvm-san-pham',[nvm_san_pham_Controller::class,'nvmList'])->name('nvmadmins.nvmsanpham');
+Route::get('/nvm-admins/nvm-san-pham/nvm-create',[nvm_san_pham_Controller::class,'nvmCreate'])->name('nvmadmins.nvmsanpham.nvmcreate');

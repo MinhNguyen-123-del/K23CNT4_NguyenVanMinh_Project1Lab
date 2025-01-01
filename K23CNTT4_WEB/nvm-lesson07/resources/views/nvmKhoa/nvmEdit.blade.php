@@ -25,11 +25,11 @@
                         </div>
                       </div>
                       <div class="mb-3 row">
-                        <label for="NVMTenKhoa" class="col-sm-2 col-form-label">Tên Khoa</label>
+                        <label for="nvmTaiKhoan " class="col-sm-2 col-form-label">Tên Tài Khoản</label>
                         <div class="col-sm-10">
                           <input type="text" readonly class="form-control" 
-                            id="nvmInsert" name="NVMTenKhoa"
-                            value="{{$nvmKhoa->nvmTenKhoa}}">
+                            id="nvmInsert" name="nvmTaiKhoan "
+                            value="{{$id->nvmTaiKhoan }}">
                         </div>
                       </div>
                 </div>

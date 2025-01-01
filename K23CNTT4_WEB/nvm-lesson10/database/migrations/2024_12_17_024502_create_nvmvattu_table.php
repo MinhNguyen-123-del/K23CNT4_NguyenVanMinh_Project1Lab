@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('vattu', function (Blueprint $table) {
+        Schema::create('nvmvattu', function (Blueprint $table) {
             //$table->id();
-            $table->string('nvmMaVTu')->primary;
-            $table->string('nvmTenVTu')->unique();
+            //$table->timestamps();
+            $table->string('nvmMaVTu')->primary();
+            $table->string('nvmTenVTu');
             $table->string('nvmDvTinh');
             $table->float('nvmPhanTram');
-            //$table->timestamps();
         });
     }
 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('vattu');
+        Schema::dropIfExists('nvmvattu');
     }
 };

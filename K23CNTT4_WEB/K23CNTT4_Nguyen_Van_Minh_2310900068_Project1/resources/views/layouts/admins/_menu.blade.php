@@ -4,7 +4,7 @@
         <a href="#">Danh Sách Quản Trị Nội Dung</a>
     </li>
     <li class="list-group-item">
-        <a href="/nvmAdmins/nvmLoaiSanPham/nvm-create">Loại Sản Phẩm</a>
+        <a href="nvm-admins/nvm-loai-san-pham">Loại Sản Phẩm</a>
     </li>
     <li class="list-group-item">A fourth item</li>
     <li class="list-group-item">And a fifth one</li>

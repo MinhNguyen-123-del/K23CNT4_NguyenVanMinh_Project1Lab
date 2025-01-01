@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\nvm_loai_san_pham;
+use Illuminate\Support\Facades\DB;
 
 class nvm_Loai_San_Pham_Controller extends Controller
 {
