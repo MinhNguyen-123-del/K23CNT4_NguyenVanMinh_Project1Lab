@@ -2,9 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; /* Sửa font-family */
+    font-family: 'Poppins', sans-serif;
 }
-
 
 section {
     position: relative;
@@ -30,9 +29,6 @@ h2 {
     margin: 30px 0;
     max-width: 310px;
     border-bottom: 2px solid #fff;
-    overflow-wrap: break-word;
-    line-height: 30px;
-    color: transparent;
 }
 
 .inputBox label {
@@ -41,20 +37,30 @@ h2 {
     left: 5px;
     transform: translateY(-50%);
     color: #fff;
-    font-weight: 1rem;
+    font-size: 1rem;
     pointer-events: none;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .inputBox input {
-    width: 100%; /* Đảm bảo input chiếm toàn bộ chiều rộng */
+    width: 100%;
     height: 60px;
     background-color: transparent;
     border: none;
     outline: none;
     font-size: 1rem;
-    padding: 0 35px 0 5px;
+    padding: 0 5px;
     color: #fff;
+}
+
+/* Khi input được focus hoặc có dữ liệu, label di chuyển lên */
+.inputBox input:focus + label,
+.inputBox input:not(:placeholder-shown) + label {
+    top: -15px; /* Label di chuyển lên trên */
+    left: 5px;
+    color: pink; /* Màu nổi bật khi nhập */
+    font-size: 0.85rem; /* Nhỏ hơn so với trạng thái ban đầu */
+    font-weight: bold;
 }
 
 .inputBox ion-icon {
@@ -99,7 +105,7 @@ button {
 }
 
 button:hover {
-    background-color: rgba(255, 255, 255, 0.5); /* Sửa cú pháp */
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .register {

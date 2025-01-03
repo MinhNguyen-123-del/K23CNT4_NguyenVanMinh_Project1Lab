@@ -7,7 +7,7 @@
             <div class="col-12 ">   
             <div class="d-flex w-100 justify-content-between">
                 <h1>Danh Sách Hóa Đơn</h1>
-                <a href="{{route('nvmadmins.nvmhoadon.nvmcreate')}}" class="btn btn-success">Thêm Mới</a>
+                <a href="{{route('nvmadmins.nvmhoadon.nvmcreate')}}" class="btn btn-success btn-sm custom-btn">Thêm Mới</a>
             </div>
            </div>
         </div>

@@ -30,7 +30,7 @@
                             <div class="mb-3 row">
                                 <label for="nvmNgayHoaDon" class="col-sm-2 col-form-label">Ngày Hóa Đơn</label>
                                 <div class="col-sm-10">
-                                  <input type="date" class="form-control" id="nvmNgayHoaDon" name="nvmNgayHoaDon" value="{{ old('nvmNgayHoaDon', $nvmNgayHoaDon ?? '') }}" >
+                                  <input type="date" class="form-control" id="nvmNgayHoaDon" name="nvmNgayHoaDon" value="{{ old('nvmNgayHoaDon', $nvmHoaDon->nvmNgayHoaDon ?? 0) }}" >
                                 </div>
                             </div>
                         </div>
@@ -38,7 +38,7 @@
                             <div class="mb-3 row">
                                 <label for="nvmNgayNhan" class="col-sm-2 col-form-label">Ngày Nhận</label>
                                 <div class="col-sm-10">
-                                  <input type="text" class="form-control" id="nvmNgayNhan" name="nvmNgayNhan" value="{{ old('nvmNgayNhan', $nvmNgayNhan ?? '') }}" >
+                                  <input type="date" class="form-control" id="nvmNgayNhan" name="nvmNgayNhan" value="{{ old('nvmNgayNhan', $nvmHoaDon->nvmNgayNhan ?? 0) }}" >
                                 </div>
                             </div>
                         </div>
@@ -46,7 +46,7 @@
                             <div class="mb-3 row">
                                 <label for="HoTenKhachHang" class="col-sm-2 col-form-label">Họ và Tên Khách Hàng</label>
                                 <div class="col-sm-10">
-                                  <input type="text" class="form-control" id="HoTenKhachHang" name="HoTenKhachHang" value="{{ old('HoTenKhachHang', $HoTenKhachHang ?? '') }}" >
+                                  <input type="text" class="form-control" id="HoTenKhachHang" name="HoTenKhachHang" value="{{ old('HoTenKhachHang', $nvmHoaDon->HoTenKhachHang ?? 0) }}"  >
                                 </div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                             <div class="mb-3 row">
                                 <label for="nvmEmail" class="col-sm-2 col-form-label">Email</label>
                                 <div class="col-sm-10">
-                                  <input type="text" class="form-control" id="nvmEmail" name="nvmEmail" value="{{ old('nvmEmail', $nvmEmail ?? '') }}">
+                                  <input type="text" class="form-control" id="nvmEmail" name="nvmEmail" value="{{ old('nvmEmail', $nvmHoaDon->nvmEmail ?? 0) }}">
                                 </div>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                             <div class="mb-3 row">
                                 <label for="nvmDienThoai" class="col-sm-2 col-form-label">Điện Thoại</label>
                                 <div class="col-sm-10">
-                                  <input type="text" class="form-control" id="nvmDienThoai" name="nvmDienThoai" value="{{ old('nvmDienThoai', $nvmDienThoai ?? '') }}">
+                                  <input type="text" class="form-control" id="nvmDienThoai" name="nvmDienThoai" value="{{ old('nvmDienThoai', $nvmHoaDon->nvmDienThoai ?? 0) }}">
                                 </div>
                             </div>
                         </div>
@@ -71,15 +71,15 @@
                             <div class="mb-3 row">
                                 <label for="nvmDiaChi" class="col-sm-2 col-form-label">Địa Chỉ</label>
                                 <div class="col-sm-10">
-                                  <input type="text" class="form-control" id="nvmDiaChi" name="nvmDiaChi" value="{{ old('nvmDiaChi', $nvmDiaChi ?? '') }}">
+                                  <input type="text" class="form-control" id="nvmDiaChi" name="nvmDiaChi" value="{{ old('nvmDiaChi', $nvmHoaDon->nvmDiaChi ?? 0) }}">
                                 </div>
                             </div>
                         </div>
                         <div class="card-body container-fluid">
                             <div class="mb-3 row">
-                                <label for="nvmTongTriGia" class="col-sm-2 col-form-label">Ngày Đăng Kí</label>
+                                <label for="nvmTongTriGia" class="col-sm-2 col-form-label">Tổng Trị Giá</label>
                                 <div class="col-sm-10">
-                                  <input type="text" class="form-control" id="nvmTongTriGia" name="nvmTongTriGia" value="{{$nvmHoaDon->nvmTongTriGia}}">
+                                  <input type="text" class="form-control" id="nvmTongTriGia" name="nvmTongTriGia" value="{{ old('nvmTongTriGia', $nvmHoaDon->nvmTongTriGia ?? 0) }}">
                                 </div>
                             </div>
                         </div>
@@ -107,7 +107,7 @@
                         </div>
                     <div class="card-footer">
                         <button class="btn btn-success">Ghi Lại</button>
-                        <a href="{{ route('nvmadmins.nvmhoadon') }}" class="btn btn-secondary">Quay lại</a>
+                        <a href="{{ route('nvmadmins.nvmcthoadon') }}" class="btn btn-secondary">Quay lại</a>
 
                     </div>
               </form>

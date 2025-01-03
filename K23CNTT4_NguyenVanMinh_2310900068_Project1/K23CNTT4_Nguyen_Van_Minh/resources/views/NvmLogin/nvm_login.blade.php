@@ -31,31 +31,37 @@
                     <div class="card-body">
                         <form method="POST" action="{{ Route('admins.nvmLoginSubmit') }}">
                             @csrf
+                            
                             <div class="inputBox">
-                                <label for="fullname">Full Name</label>
-                                <input type="text" name="fullname" id="fullname"required>
+                                <input type="text" name="fullname" id="fullname" required placeholder=" ">
+                                <label for="fullname">Họ và Tên</label>
                             </div>
+                           
                             <div class="inputBox">
+                                <input type="email" name="email" id="email" required placeholder=" ">
                                 <label for="email">Email</label>
-                                <input type="email" name="email" id="email"required>
                             </div>
+                            
                             <div class="inputBox">
-                                <label for="password">Password</label>
-                                <input type="password" name="password" id="password"required >
+                                <input type="password" name="password" id="password" required placeholder=" ">
+                                <label for="password">Mật khẩu</label>
                             </div>
+                           
                             <div class="forget">
-                                <label for=""><input type="checkbox">Remember Me</label>
-                                <a href="#">Forget password</a>
+                                <label>
+                                    <input type="checkbox" name="remember"> Ghi nhớ đăng nhập
+                                </label>
+                                <a href="#">Quên mật khẩu?</a>
                             </div>
-                            <button>Log In</button>
+                           
+                            <button type="submit">Đăng Nhập</button>
                         </form>
+                        
                         <div class="register">
-                            <p>Don't have an account? <a href="#">Register</a></p>
+                            <p>Bạn chưa có tài khoản? <a href="#">Đăng ký ngay</a></p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-</body>
-</html>
+            </section>
+        </body>
+        </html>

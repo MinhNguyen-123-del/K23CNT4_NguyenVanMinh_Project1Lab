@@ -21,14 +21,14 @@
                         <div class="mb-3 row">
                             <label for="nvmTenSanPham" class="col-sm-2 col-form-label">Tên Sản Phẩm</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" id="nvmTenSanPham" name="nvmTenSanPham" value="{{$nvmSanPham->nvmTenSanPham}}">
+                              <input type="text" class="form-control" id="nvmTenSanPham" name="nvmTenSanPham" value="{{ old('nvmTenSanPham', $nvmSanPham->nvmTenSanPham ?? 0) }}">
                             </div>  
                         </div>
                         <div class="card-body container-fluid">
                             <div class="mb-3 row">
                                 <label for="nvmSoLuong" class="col-sm-2 col-form-label">Số Lượng</label>
                                 <div class="col-sm-10">
-                                    <input type="number" class="form-control" id="nvmSoLuong" name="nvmSoLuong" value="{{$nvmSanPham->nvmSoLuong}}">
+                                    <input type="number" class="form-control" id="nvmSoLuong" name="nvmSoLuong" value="{{ old('nvmSoLuong', $nvmSanPham->nvmSoLuong ?? 0) }}">
                                     @error('nvmSoLuong')
                                     <span class="text-danger">{{$message}}</span>
                                 @enderror
@@ -37,7 +37,7 @@
                                 <div class="mb-3 row">
                                     <label for="nvmDonGia" class="col-sm-2 col-form-label">Đơn Giá</label>
                                     <div class="col-sm-10">
-                                        <input type="float" class="form-control" id="nvmDonGia" name="nvmDonGia" value="{{$nvmSanPham->nvmDonGia}}">
+                                        <input type="float" class="form-control" id="nvmDonGia" name="nvmDonGia" value="{{ old('nvmDonGia', $nvmSanPham->nvmDonGia ?? 0) }}">
                                         @error('nvmDonGia')
                                         <span class="text-danger">{{$message}}</span>
                                     @enderror
@@ -46,7 +46,7 @@
                                 <div class="mb-3 row">
                                     <label for="nvmMaLoai" class="col-sm-2 col-form-label">Mã Loại</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="nvmMaLoai" name="nvmMaLoai" value="{{$nvmSanPham->nvmMaLoai}}">
+                                        <input type="text" class="form-control" id="nvmMaLoai" name="nvmMaLoai" value="{{ old('nvmMaLoai', $nvmSanPham->nvmMaLoai ?? 0) }}">
                                         @error('nvmMaLoai')
                                         <span class="text-danger">{{$message}}</span>
                                     @enderror

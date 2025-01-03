@@ -6,6 +6,8 @@ use App\Http\Controllers\Nvm_Loai_San_Pham_Controller;
 use App\Http\Controllers\Nvm_San_Pham_Controller;
 use App\Http\Controllers\Nvm_Khach_Hang_Controller;
 use App\Http\Controllers\Nvm_Hoa_Don_Controller;
+use App\Http\Controllers\Nvm_CT_Hoa_Don_COntroller;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -71,3 +73,25 @@ Route::post('/nvm-admins/nvm-hoa-don/nvm-edit',[Nvm_Hoa_Don_Controller::class,'n
 
 #Delete Hóa Đơn
 Route::get('/nvm-admins/nvm-hoa-don/nvm-delete/{id}',[Nvm_Hoa_Don_Controller::class,'nvmDelete'])->name('nvmadmins.nvmhoadon.nvmdelete');
+
+#Ct Hóa Đơn
+Route::get('/nvm-admins/nvm-ct-hoa-don',[Nvm_CT_Hoa_Don_COntroller::class,'nvmList'])->name('nvmadmins.nvmcthoadon');
+Route::get('/nvm-admins/nvm-ct-hoa-don/nvm-create',[Nvm_CT_Hoa_Don_COntroller::class,'nvmCreate'])->name('nvmadmins.nvmcthoadon.nvmcreate');
+Route::post('/nvm-admins/nvm-ct-hoa-don/nvm-create',[Nvm_CT_Hoa_Don_COntroller::class,'nvmCreateSubmit'])->name('nvmadmins.nvmcthoadon.nvmcreatesubmit');
+#Edit Ct Hóa Đơn
+Route::get('/nvm-admins/nvm-ct-hoa-don/nvm-edit/{id}',[Nvm_CT_Hoa_Don_COntroller::class,'nvmEdit'])->name('nvmadmins.nvmcthoadon.nvmedit');
+Route::post('/nvm-admins/nvm-ct-hoa-don/nvm-edit',[Nvm_CT_Hoa_Don_COntroller::class,'nvmEditSubmit'])->name('nvmadmins.nvmcthoadon.nvmeditsubmit');
+
+#Delete Ct Hóa Đơn
+Route::get('/nvm-admins/nvm-ct-hoa-don/nvm-delete/{id}',[Nvm_CT_Hoa_Don_COntroller::class,'nvmDelete'])->name('nvmadmins.nvmcthoadon.nvmdelete');
+
+#Quản Trị
+Route::get('/nvm-admins/nvm-quan-tri',[Nvm_Quan_Tri_Vien_Controller::class,'nvmList'])->name('nvmadmins.nvmquantri');
+Route::get('/nvm-admins/nvm-quan-tri/nvm-create',[Nvm_Quan_Tri_Vien_Controller::class,'nvmCreate'])->name('nvmadmins.nvmquantri.nvmcreate');
+Route::post('/nvm-admins/nvm-quan-tri/nvm-create',[Nvm_Quan_Tri_Vien_Controller::class,'nvmCreateSubmit'])->name('nvmadmins.nvmquantri.nvmcreatesubmit');
+#Edit Quản Trị
+Route::get('/nvm-admins/nvm-quan-tri/nvm-edit/{id}',[Nvm_Quan_Tri_Vien_Controller::class,'nvmEdit'])->name('nvmadmins.nvmquantri.nvmedit');
+Route::get('/nvm-admins/nvm-quan-tri/nvm-edit',[Nvm_Quan_Tri_Vien_Controller::class,'nvmEditSubmit'])->name('nvmadmins.nvmquantri.nvmeditsubmit');
+
+#Delete Quản Trị
+Route::get('/nvm-admins/nvm-quan-tri/nvm-delete/{id}',[Nvm_Quan_Tri_Vien_Controller::class,'nvmDelete'])->name('nvmadmins.nvmquantri.nvmdelete');

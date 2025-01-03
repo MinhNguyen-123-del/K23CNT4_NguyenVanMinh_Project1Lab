@@ -1,5 +1,5 @@
 @extends('layouts.admins._master')
-@section('title','Danh sach Khách Hàng')
+@section('title','Thêm Mới Khách Hàng')
 
 @section('content-body')
     <div class="container boder">
@@ -8,7 +8,7 @@
               <form action="{{route('nvmadmins.nvmkhachhang.nvmcreatesubmit')}}" method="post">
                     @csrf
                     <div class="card-header">
-                        <h2>Thêm Mới Khách Hàngx</h2>
+                        <h2>Thêm Mới Khách Hàng</h2>
                     </div>
                     <div class="card-body container-fluid">
                         <div class="mb-3 row">

@@ -21,8 +21,8 @@ class Nvm_Hoa_Don_Controller extends Controller
     {
         //ghi du lieu xuong db
         $nvmHoaDon= new nvm_hoa_don;
-        $nvmHoaDon->nvmnvmMaHoaDon = $request->nvmnvmMaHoaDon;
-        $nvmHoaDon->nvmnvmMaKhachHang=$request->nvmnvmMaKhachHang;
+        $nvmHoaDon->nvmMaHoaDon = $request->nvmMaHoaDon;
+        $nvmHoaDon->nvmMaKhachHang=$request->nvmMaKhachHang;
         $nvmHoaDon->nvmNgayHoaDon=$request->nvmNgayHoaDon;
         $nvmHoaDon->nvmNgayNhan=$request->nvmNgayNhan;
         $nvmHoaDon->HoTenKhachHang=$request->HoTenKhachHang;
@@ -44,8 +44,13 @@ class Nvm_Hoa_Don_Controller extends Controller
     public function nvmEditSubmit(Request $request)
     {
         $nvmHoaDon= nvm_hoa_don::find($request-> id);
-        $nvmHoaDon->nvmnvmMaHoaDon = $request->nvmnvmMaHoaDon;
-        $nvmHoaDon->nvmnvmMaKhachHang=$request->nvmnvmMaKhachHang;
+        if (!$nvmHoaDon) {
+            return response()->json([
+                'error' => 'Không tìm thấy hóa đơn với ID được cung cấp.'
+            ], 404);
+        }
+        $nvmHoaDon->nvmMaHoaDon = $request->nvmMaHoaDon;
+        $nvmHoaDon->nvmMaKhachHang=$request->nvmMaKhachHang;
         $nvmHoaDon->nvmNgayHoaDon=$request->nvmNgayHoaDon;
         $nvmHoaDon->nvmNgayNhan=$request->nvmNgayNhan;
         $nvmHoaDon->HoTenKhachHang=$request->HoTenKhachHang;
